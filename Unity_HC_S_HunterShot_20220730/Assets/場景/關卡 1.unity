@@ -2516,6 +2516,78 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325027630}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &331773329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 331773331}
+  - component: {fileID: 331773330}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &331773330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331773329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21261165cb79db74088b5a84754fb2d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreB: 90
+  speed: 3.5
+  weapon: "\u706B\u7BAD\u7B52"
+  isDead: 0
+  isGrounded: 1
+  v2Position: {x: 0, y: 0}
+  v2One: {x: 1, y: 1}
+  v2Custom: {x: 7.5, y: 9.9}
+  v3Custom: {x: 1, y: 2, z: 3}
+  v4Custom: {x: 9, y: 8, z: 7, w: 6}
+  colorDefault: {r: 0, g: 0, b: 0, a: 0}
+  colorRed: {r: 1, g: 0, b: 0, a: 1}
+  colorCustom: {r: 1, g: 0, b: 1, a: 1}
+  colorCustomRGBA: {r: 0, g: 1, b: 0, a: 0.5}
+  keyA: 97
+  keyJump: 273
+  keyFire: 323
+  soundAttack: {fileID: 8300000, guid: 47f45ef7b5767674393cc401fc325705, type: 3}
+  pictureWin: {fileID: 21300000, guid: 1f97f79a121e29e40ba1785c4863720d, type: 3}
+  materiaDissolve: {fileID: 2100000, guid: 1c21484dcc829834f98b6227895b8fdd, type: 2}
+  goPurple: {fileID: 1324141856}
+  prefabmarble: {fileID: 0}
+  psLight: {fileID: 1519351911}
+  mainCamera: {fileID: 1735943659}
+  testint: 10
+  testFloat: 35
+  numberTest: 99
+  numberFloatTest: 5.5
+  weaponName: "\u7F8E\u5DE5\u5200"
+--- !u!4 &331773331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331773329}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &344993958
 GameObject:
   m_ObjectHideFlags: 0
@@ -8806,6 +8878,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1211221653574093876, guid: 9567168e85118da4a9e668d51492efb1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9567168e85118da4a9e668d51492efb1, type: 3}
+--- !u!1 &1324141856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2021683560567721682, guid: 9567168e85118da4a9e668d51492efb1, type: 3}
+  m_PrefabInstance: {fileID: 1324141855}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1341508977
 GameObject:
   m_ObjectHideFlags: 0
