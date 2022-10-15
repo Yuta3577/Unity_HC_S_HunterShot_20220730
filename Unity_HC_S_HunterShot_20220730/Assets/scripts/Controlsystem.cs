@@ -1,22 +1,26 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 
 namespace YutaSpace
 {
 	/// <summary>
-	/// ±±¨î¨t²Î
+	/// æ§åˆ¶ç³»çµ±
 	/// </summary>
 	public class Controlsysteam : MonoBehaviour
 	{
-		#region ¸ê®Æ
-		[SerializeField]
+		#region è³‡æ–™
+		[SerializeField, Range(0,50)]
 		private float speed = 10.5f;
 		[SerializeField]
 		private int countshootmarble = 10;
+		[SerializeField, Range(0, 5000)]
 		private int speedmarble = 1500;
+		[SerializeField, Range(0, 3)]
 		private float intervel = 0.5f;
+		[SerializeField, Header("å½ˆç é è£½ç‰©")]
 		private GameObject prefabmarble;
-		private string parAttack = "Ä²µo§ğÀ»";
+
+		private string parAttack = "è§¸ç™¼æ”»æ“Š";
 		#endregion
 	}
 }

@@ -1,43 +1,43 @@
-// ³æ¦æµù¸Ñ
-using UnityEngine; // ¤Ş¥ÎUnity¹CÀ¸¤ŞÀº©R¦WªÅ¶¡¡G­Ü®w¹ê¥Î¸ê®Æ»P¥\¯à
+ï»¿// å–®è¡Œè¨»è§£
+using UnityEngine; // å¼•ç”¨UnityéŠæˆ²å¼•æ“å‘½åç©ºé–“ï¼šå€‰åº«å¯¦ç”¨è³‡æ–™èˆ‡åŠŸèƒ½
 
-// ¸}¥» = Ãş§O
+// è…³æœ¬ = é¡åˆ¥
 /*
- * ¦h¦æµù¸Ñ
- * ¦h¦æµù¸Ñ
+ * å¤šè¡Œè¨»è§£
+ * å¤šè¡Œè¨»è§£
  */
 
 namespace YutaSpace
 {
-    // Unity Ãş§O­n°õ¦æ¥²¶·©ñ¦b¹CÀ¸ª«¥ó¤W
+    // Unity é¡åˆ¥è¦åŸ·è¡Œå¿…é ˆæ”¾åœ¨éŠæˆ²ç‰©ä»¶ä¸Š
     /// <summary>
-    /// ºK­n¡G»²§U»¡©ú¨Ã¥B·|¥X²{¦b½sÄ¶¾¹´£¥Ü¤W
-    /// first scripts ²Ä¤@­Ó¸}¥»¾Ç²ß C# °òÂ¦»P Unity
+    /// æ‘˜è¦ï¼šè¼”åŠ©èªªæ˜ä¸¦ä¸”æœƒå‡ºç¾åœ¨ç·¨è­¯å™¨æç¤ºä¸Š
+    /// first scripts ç¬¬ä¸€å€‹è…³æœ¬å­¸ç¿’ C# åŸºç¤èˆ‡ Unity
     /// </summary>
     public class firstscripts : MonoBehaviour
     {
-        #region ¸ê®Æ°Ï°ì
-        //¸ê®Æ
-        //¸ê®Æ
+        #region è³‡æ–™å€åŸŸ
+        //è³‡æ–™
+        //è³‡æ–™
         #endregion
 
-        #region ¨Æ¥ó°Ï°ì¡GUnity ¤J¤f
+        #region äº‹ä»¶å€åŸŸï¼šUnity å…¥å£
         /// <summary>
-        /// ³ê¿ô¨Æ¥ó¡G¹CÀ¸¶}©l®É¨Ã¥B¦b start «e°õ¦æ¤@¦¸
+        /// å–šé†’äº‹ä»¶ï¼šéŠæˆ²é–‹å§‹æ™‚ä¸¦ä¸”åœ¨ start å‰åŸ·è¡Œä¸€æ¬¡
         /// </summary>
         private void Awake()
         {
-            print("«¢Åo¡A¨U¼w:D");
+            print("å“ˆå›‰ï¼Œæ²ƒå¾·:D");
         }
 
         /// <summary>
-        /// ¶}©l¨Æ¥ó¡G¹CÀ¸¶}©l®É¨Ã¥B¦b Awake «á°õ¦æ¤@¦¸
+        /// é–‹å§‹äº‹ä»¶ï¼šéŠæˆ²é–‹å§‹æ™‚ä¸¦ä¸”åœ¨ Awake å¾ŒåŸ·è¡Œä¸€æ¬¡
         /// </summary>
         private void Start()
         {
-            print("¶}©l¨Æ¥ó¡I");
+            print("é–‹å§‹äº‹ä»¶ï¼");
             // Rich Text
-            print("<color=yellow>¶À¦â¤å¦r</color>");
+            print("<color=yellow>é»ƒè‰²æ–‡å­—</color>");
         }
         #endregion
     }

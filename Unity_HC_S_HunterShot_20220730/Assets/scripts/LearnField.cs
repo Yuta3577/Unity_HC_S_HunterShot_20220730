@@ -1,38 +1,38 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace YutaSpace
 {
     /// <summary>
-    /// ¾Ç²ßÄæ¦ì Field
+    /// å­¸ç¿’æ¬„ä½ Field
     /// </summary>
     public class LearnField : MonoBehaviour
     {
-        #region Äæ¦ì»yªk¡B­×¹¢µü»P¥|¤jÃş«¬
-        //Äæ¦ì»yªk¡G
-        //­×¹¢µü ¸ê®ÆÃş«¬ Äæ¦ì¦WºÙ;
+        #region æ¬„ä½èªæ³•ã€ä¿®é£¾è©èˆ‡å››å¤§é¡å‹
+        //æ¬„ä½èªæ³•ï¼š
+        //ä¿®é£¾è© è³‡æ–™é¡å‹ æ¬„ä½åç¨±;
         private int number;
 
-        //­×¹¢µü ¸ê®ÆÃş«¬ Äæ¦ì¦WºÙ «ü©w ­È;
+        //ä¿®é£¾è© è³‡æ–™é¡å‹ æ¬„ä½åç¨± æŒ‡å®š å€¼;
         private int level = 1;
 
-        //¨p¤H¡G¦¹Ãş§O¥i¥H¦s¨ú¡A¤£·|Åã¥Ü¦bÄİ©Ê­±ªO
+        //ç§äººï¼šæ­¤é¡åˆ¥å¯ä»¥å­˜å–ï¼Œä¸æœƒé¡¯ç¤ºåœ¨å±¬æ€§é¢æ¿
         private int scoreA = 60;
 
-        //¤½¶}¡G©Ò¦³Ãş§O¥i¥H¦s¨ú¡A·|Åã¥Ü¦bÄİ©Ê­±ªO
-        //¾ã¼Æ int
+        //å…¬é–‹ï¼šæ‰€æœ‰é¡åˆ¥å¯ä»¥å­˜å–ï¼Œæœƒé¡¯ç¤ºåœ¨å±¬æ€§é¢æ¿
+        //æ•´æ•¸ int
         public int scoreB = 90;
-        //¯BÂI¼Æ float
+        //æµ®é»æ•¸ float
         public float speed = 3.5f;
-        //¦r¦ê string
-        public string weapon = "¤õ½bµ©";
-        //¥¬ªL­È
+        //å­—ä¸² string
+        public string weapon = "ç«ç®­ç­’";
+        //å¸ƒæ—å€¼
         public bool isDead = false;
         public bool isGrounded = true;
         #endregion
 
 
-        #region Unity ±`¥ÎÃş«¬
-        //¦V¶q
+        #region Unity å¸¸ç”¨é¡å‹
+        //å‘é‡
         public Vector2 v2Position;
         public Vector2 v2One = Vector2.one;
         public Vector2 v2Custom = new Vector2(7.5f, 9.9f);
@@ -40,27 +40,27 @@ namespace YutaSpace
         public Vector3 v3Custom = new Vector3(1, 2, 3);
         public Vector4 v4Custom = new Vector4(9, 8, 7, 6);
 
-        //ÃC¦â
+        //é¡è‰²
         public Color colorDefault;
         public Color colorRed=Color.red;
         public Color colorCustom=new Color(1,0,1);
         public Color colorCustomRGBA=new Color(0,1,0,0.5f);
 
-        //¦CÁ|¸ê®Æ «öÁä
+        //åˆ—èˆ‰è³‡æ–™ æŒ‰éµ
         public KeyCode keyA = KeyCode.A;
         public KeyCode keyJump = KeyCode.Space;
         public KeyCode keyFire = KeyCode.Mouse0;
 
-        //¯À§÷Ãş«¬¡G¤£¯à«ü©w­È¡A¥²Äò³z¹L API ¨ú±o©ÎªÌ¦bÄİ©Ê­±ªO©ì¦²
+        //ç´ æé¡å‹ï¼šä¸èƒ½æŒ‡å®šå€¼ï¼Œå¿…çºŒé€é API å–å¾—æˆ–è€…åœ¨å±¬æ€§é¢æ¿æ‹–æ›³
         public AudioClip soundAttack;
         public Sprite pictureWin;
         public Material materiaDissolve;
 
-        //¹CÀ¸ª«¥ó¡G¶¥¼h­±ªO»P±M¤ºªºª«¥ó©Î¹w»sª«
+        //éŠæˆ²ç‰©ä»¶ï¼šéšå±¤é¢æ¿èˆ‡å°ˆå…§çš„ç‰©ä»¶æˆ–é è£½ç‰©
         public GameObject goPurple;
         public GameObject prefabmarble;
 
-        //¤¸¥ó
+        //å…ƒä»¶
         public ParticleSystem psLight;
         public Camera mainCamera;
 
@@ -68,33 +68,33 @@ namespace YutaSpace
 
 		private void Awake()
 		{
-            //¨ú ¨ú±o¸ê®Æ Get
-            //Äæ¦ì¦WºÙ
-            //¥HUnityÄİ©Ê­±ªO­È¬°¥D
+            //å– å–å¾—è³‡æ–™ Get
+            //æ¬„ä½åç¨±
+            //ä»¥Unityå±¬æ€§é¢æ¿å€¼ç‚ºä¸»
             print(level);
-            print("³t«×¡G" + speed);
+            print("é€Ÿåº¦ï¼š" + speed);
 
-            //¦s ¦s©ñ¸ê®Æ Set
-            //Äæ¦ì¦WºÙ «ü©w ­È
-            weapon = "¤âºh¼u";
+            //å­˜ å­˜æ”¾è³‡æ–™ Set
+            //æ¬„ä½åç¨± æŒ‡å®š å€¼
+            weapon = "æ‰‹æ¦´å½ˆ";
             scoreB = 10;
             speed = 105f;
             isDead = true;
 		}
 
-        #region Äæ¦ìÄİ©Ê Flied Attritube
-        [Header("¼ĞÃD")]
+        #region æ¬„ä½å±¬æ€§ Flied Attritube
+        [Header("æ¨™é¡Œ")]
         public int testint = 10;
-        [Tooltip("§Ú¬O´£¥Ü¡C")]
+        [Tooltip("æˆ‘æ˜¯æç¤ºã€‚")]
         public float testFloat = 35f;
         [Range(10,100)]
         public int numberTest = 99;
         [Range(2.5f, 7.5f)]
         public float numberFloatTest = 5.5f;
-        //Range ¥u¯à©ñ¦b¾ã¼Æ»P¯B°ÊÂI¤W
+        //Range åªèƒ½æ”¾åœ¨æ•´æ•¸èˆ‡æµ®å‹•é»ä¸Š
 
         [SerializeField]
-        private string weaponName = "¬ü¤u¤M";
+        private string weaponName = "ç¾å·¥åˆ€";
 		#endregion
 	}
 
