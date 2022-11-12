@@ -40,6 +40,10 @@ namespace YutaSpace
             //9，一般，閃電
             ShootMarble(9, "閃電"); //錯誤執行結果：9，閃電，光點
             ShootMarble(9, effect: "閃電");
+
+            //在方法或事件內，這個稱為區域變數 - 欄位有限制性，僅在此結構內能使用
+            int ten = ReturnTen();
+            print("傳回的數字：" + ten);
         }
         //參數語法：
         //類型 參數 1 名稱，類型 參數 1 名稱，...(無上限)
@@ -59,13 +63,39 @@ namespace YutaSpace
             print("彈珠屬性：" + type);
         }
 
-        //有預設值的參數必須寫在後面
-        /*
+        /*有預設值的參數必須寫在後面
+        /
         private void WrongMethod(float a = 3.5f, float b)
         {
 
         }
         */
+
+        private int ReturnTen()
+        {
+            return 10;
+        }
+
+        private void Start()
+        {
+            float BMIYUTA = BMI(1.7f, 84);
+            print("YUTA BMI：" + BMIYUTA);
+
+            print("50 BMI：" + BMI(1.75f, 75));
+        }
+        //計算BMI
+        //提供身高(公尺)、體重並算出BMI值：體重/身高平方
+        /// <summary>
+        /// 計算BMI的方法
+        /// </summary>
+        /// <param name="height">請輸入身高，公尺</param>
+        /// <param name="weight">請輸入體重</param>
+        /// <returns>BMI 結果</returns>
+        private float BMI(float height,float weight)
+        {
+            float result = weight / (height * height);
+            return result;
+        }
     }
 
 }

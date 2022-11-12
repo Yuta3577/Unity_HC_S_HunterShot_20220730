@@ -21,7 +21,34 @@ namespace YutaSpace
 		private GameObject prefabmarble;
 
 		private string parAttack = "觸發攻擊";
-		#endregion
-	}
+        #endregion
+
+        #region 方法
+		/// <summary>
+		/// 旋轉角色
+		/// </summary>
+		private void TurnCharacter()
+        {
+
+        }
+
+		/// <summary>
+		/// 發射彈珠
+		/// </summary>
+		private void ShootMarble()
+        {
+
+        }
+
+		/// <summary>
+		/// 生成彈珠
+		/// </summary>
+		/// <param name="countToSpawn">生成彈珠的數量</param>
+		private void SpawnMarble(int countToSpawn)
+        {
+
+        }
+        #endregion
+    }
 }
 
